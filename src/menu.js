@@ -1,4 +1,6 @@
-export default function menufn() {
-    console.log('menufn works');
+function menu() {
+    console.log('called menu!');
 }
   
+
+export {menu};

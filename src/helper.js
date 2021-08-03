@@ -1,9 +1,16 @@
+import * as loadContent from "./loadcontent";
+
 function createTab(tabName) {
-    const content = document.querySelector("#content");
     const tab = document.createElement('div');
+    tab.classList.add("tab");
     tab.id = tabName;
     tab.textContent = tabName;
-    content.appendChild(tab);
+    tab.addEventListener("click",load);
+    return tab;
+}
+
+function load () {
+    loadContent[this.id]();
 }
 
 export { createTab };
