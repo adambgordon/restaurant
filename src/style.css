@@ -6,8 +6,14 @@ html {
     color: rgb(80,80,80);
 }
 
+#wrapper {
+    position: relative;
+    min-height: 90vh;
+}
+
 #header {
     font-size: 2rem;
+    font-weight: 600;
     width: fit-content;
     margin: 2rem auto;
     text-decoration: underline;
@@ -32,7 +38,6 @@ html {
     margin: 2rem;
     display: flex;
     justify-content: center;
-
 }
 
 #footer {
@@ -42,32 +47,6 @@ html {
     display: flex;
     justify-content: center;
 }
-
-/* #background {
-    z-index: -1;
-    color: rgb(230, 230, 230);
-
-
-    position: relative;
-    overflow: hidden;
-
-
-}
-
-#background div {
-    font-size: 10rem;
-
-    position: absolute;
-    top: -75%;
-    left: -75%;
-
-    display: block;
-    width: 150%;
-    height: 150%;
-
-    transform: rotate(-45deg);
-} */
-
 
 #background {
     z-index: -1;
