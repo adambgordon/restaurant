@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-family: Inconsolata, 'Courier New', Courier, monospace;
+    font-weight: 400;
+    color: rgb(80,80,80);
+}
+
+#header {
+    font-size: 2rem;
+    width: fit-content;
+    margin: 2rem auto;
+    text-decoration: underline;
+}
+
+#nav {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#nav div {
+    margin: 1rem 4rem;
+}
+
+#nav div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#content {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

@@ -1,7 +1,7 @@
 import * as getContent from "./getcontent.js";
 
 function createTab(tabName) {
-    const tab = document.createElement('div');
+    const tab = document.createElement("div");
     tab.classList.add("tab");
     tab.id = tabName;
     tab.textContent = tabName;
@@ -11,7 +11,6 @@ function createTab(tabName) {
 
 function load () {
     if (this.classList.contains("active")) return;
-
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach( (tab) => {
         if (tab.classList.contains("active") && tab !== this) {
@@ -20,8 +19,12 @@ function load () {
             
         }
     });
-    this.classList.add("active");
-    addContent(getContent[this.id]());
+    activate(this);
+}
+
+function activate(tab) {
+    tab.classList.add("active");
+    addContent(getContent[tab.id]());
 }
 
 function addContent(item) {
@@ -32,4 +35,4 @@ function removeContent() {
     return document.getElementById("content").firstChild.remove();
 }
 
-export { createTab };
+export { createTab, activate };
