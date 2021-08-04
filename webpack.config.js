@@ -33,6 +33,10 @@ module.exports = {
                 use: 'raw-loader',
             },
             {
+                test: /\.(csv|tsv)$/i,
+                use: ['csv-loader'],
+            },
+            {
                 test: /\.json5$/i,
                 type: 'json',
                 parser: {
