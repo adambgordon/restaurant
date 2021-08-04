@@ -40,6 +40,17 @@ html {
     justify-content: center;
 }
 
+.about {
+    width: 30rem;
+    text-align: center;
+    line-height: 175%;
+}
+
+.contact div {
+    display: flex;
+    margin: 0.5rem;
+    justify-content: center;
+}
 #footer {
     position: absolute;
     bottom: 0;

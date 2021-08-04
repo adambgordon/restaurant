@@ -1,6 +1,9 @@
+import txt from "./about.txt";
+
 function createAbout() {
     const item = document.createElement("div");
-    item.textContent = "founded in 2013."
+    item.classList.add("about");
+    item.textContent = txt;
     return item;
 }
 

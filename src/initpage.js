@@ -46,14 +46,16 @@ function initBackground() {
 }
 
 function initPage () {
+    document.body.appendChild(initBackground());
+
     const wrapper = document.createElement("div");
     wrapper.id = "wrapper";
     wrapper.appendChild(initHeader());
     wrapper.appendChild(initNav());
     wrapper.appendChild(initContent());
     wrapper.appendChild(initFooter());
-    wrapper.appendChild(initBackground());
     document.body.appendChild(wrapper);
+    
     helper.activate(document.getElementById("about"));
 }
 
