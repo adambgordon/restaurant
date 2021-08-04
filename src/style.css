@@ -42,3 +42,40 @@ html {
     display: flex;
     justify-content: center;
 }
+
+/* #background {
+    z-index: -1;
+    color: rgb(230, 230, 230);
+
+
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+#background div {
+    font-size: 10rem;
+
+    position: absolute;
+    top: -75%;
+    left: -75%;
+
+    display: block;
+    width: 150%;
+    height: 150%;
+
+    transform: rotate(-45deg);
+} */
+
+
+#background {
+    z-index: -1;
+    position: fixed;
+    font-size: 14rem;
+    width: 940rem;
+    top: -200rem;
+    left: -200rem;
+    transform: rotate(-45deg);
+    color: rgb(245, 245, 245);
+}

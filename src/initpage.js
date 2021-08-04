@@ -1,4 +1,4 @@
-import { head } from "lodash";
+import { fill, head } from "lodash";
 import * as helper from "./helper.js"
 
 function initHeader() {
@@ -35,11 +35,27 @@ function initFooter() {
     document.body.appendChild(footer);
 }
 
+function initBackground() {
+    const background = document.createElement("div");
+    background.id = "background";
+
+    const text = document.createElement("div");
+    text.classList.add("background-text");
+    let string = "the brunch place ";
+    for (let i = 0; i < 9; i++) {
+        string += string;
+    }
+    text.textContent = string;
+    background.appendChild(text);
+    document.body.appendChild(background);
+}
+
 function initPage () {
     initHeader();
     initNav();
     initContent();
     initFooter();
+    initBackground();
 }
 
 export default initPage;
