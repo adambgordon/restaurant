@@ -12,7 +12,7 @@ html {
 }
 
 #header {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 600;
     width: fit-content;
     margin: 2rem auto;
@@ -20,7 +20,7 @@ html {
 }
 
 #nav {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     display: flex;
     justify-content: center;
 }
@@ -52,19 +52,48 @@ html {
     justify-content: center;
 }
 
-.mains {
+.section-header {
+    margin: 1rem auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+
+.divider, .label {
+    margin: 0 1rem;
+}
+
+.dish-grid {
+    margin-bottom: 3rem;
+    font-size: 1rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
 }
 
 .dish {
-    border: 1px solid black;
+    width: 16rem;
+    margin: 1rem;
+}
 
+.dish-name, .dish-description {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.dish-name {
+
+}
+
+.dish-description {
+    font-size: 1rem;
+    font-weight: 200;
 }
 
 
 #footer {
+    font-size: .9rem;
     position: absolute;
     bottom: 0;
     width: 100%;

@@ -1,22 +1,41 @@
 import mains from "./menu/mains.csv";
 
-function createMenu() {
-    const menu = document.createElement("div");
-    const smallsHeader = document.createElement("div");
-    const smallsWrapper = document.createElement("div");
-    const mainsHeader = document.createElement("div");
-    const mainsWrapper = document.createElement("div");
+function createDishSection (string) {
+    const sectionHeader = document.createElement("div");
+    const label = document.createElement("div");
+    const divider1 = document.createElement("div");
+    const divider2 = document.createElement("div");
 
-    menu.classList.add("menu");
-    smallsHeader.id = "smalls";
-    smallsWrapper.classList.add("smalls");
-    mainsHeader.id = "mains";
-    mainsWrapper.classList.add("mains");
+    sectionHeader.classList.add("section-header");
+    label.classList.add("label");
+    divider1.classList.add("divider");
+    divider2.classList.add("divider");
 
-    smallsHeader.textContent = "smalls";
-    mainsHeader.textContent = "mains";
+    label.textContent = string;
+    divider1.textContent = ".........................";
+    divider2.textContent = ".........................";
+    
+    sectionHeader.appendChild(divider1);
+    sectionHeader.appendChild(label);
+    sectionHeader.appendChild(divider2);
 
-    for (let i = 0; i < mains.length; i++) {
+    return sectionHeader;
+}
+
+function createDishList(string) {
+    const gridWrapper = document.createElement("div");
+    gridWrapper.classList.add("dish-grid");
+
+    let array;
+    if (string === "smalls") {
+        // array = smalls;
+    } else if (string === "mains") {
+        array = mains;
+    } else {
+        return;
+    }
+
+    for (let i = 0; i < array.length; i++) {
         const dish = document.createElement("div");
         const name = document.createElement("div");
         const description = document.createElement("div");
@@ -25,19 +44,21 @@ function createMenu() {
         name.classList.add("dish-name");
         description.classList.add("dish-description");
 
-        name.textContent = mains[i][0];
-        description.textContent = mains[i][1];
+        name.textContent = array[i][0];
+        description.textContent = array[i][1];
         
         dish.appendChild(name);
         dish.appendChild(description);
-
-        mainsWrapper.appendChild(dish);
+        gridWrapper.appendChild(dish);
     }
+    return gridWrapper;
+}
 
-    smallsHeader.appendChild(smallsWrapper);
-    mainsHeader.appendChild(mainsWrapper);
-    menu.appendChild(smallsHeader);
-    menu.appendChild(mainsHeader);
+function createMenu() {
+    const menu = document.createElement("div");
+    menu.appendChild(createDishSection("smalls"));
+    menu.appendChild(createDishSection("mains"));
+    menu.appendChild(createDishList("mains"));
     return menu;
 }
 
