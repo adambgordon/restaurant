@@ -36,11 +36,11 @@ function initBackground() {
     background.id = "background";
     const text = document.createElement("div");
     text.classList.add("background-text");
-    let string = "the brunch place ";
+    let backgroundString = "the brunch place ";
     for (let i = 0; i < 9; i++) {
-        string += string;
+        backgroundString += backgroundString;
     }
-    text.textContent = string;
+    text.textContent = backgroundString;
     background.appendChild(text);
     return background;
 }

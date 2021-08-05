@@ -1,4 +1,6 @@
+import smalls from "./menu/smalls.csv";
 import mains from "./menu/mains.csv";
+import sweets from "./menu/sweets.csv"
 
 function createDishSection (string) {
     const sectionHeader = document.createElement("div");
@@ -22,18 +24,9 @@ function createDishSection (string) {
     return sectionHeader;
 }
 
-function createDishList(string) {
+function createDishList(array) {
     const gridWrapper = document.createElement("div");
     gridWrapper.classList.add("dish-grid");
-
-    let array;
-    if (string === "smalls") {
-        // array = smalls;
-    } else if (string === "mains") {
-        array = mains;
-    } else {
-        return;
-    }
 
     for (let i = 0; i < array.length; i++) {
         const dish = document.createElement("div");
@@ -57,8 +50,11 @@ function createDishList(string) {
 function createMenu() {
     const menu = document.createElement("div");
     menu.appendChild(createDishSection("smalls"));
+    menu.appendChild(createDishList(smalls));
     menu.appendChild(createDishSection("mains"));
-    menu.appendChild(createDishList("mains"));
+    menu.appendChild(createDishList(mains));
+    menu.appendChild(createDishSection("sweets"));
+    menu.appendChild(createDishList(sweets));
     return menu;
 }
 
