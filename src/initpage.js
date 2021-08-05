@@ -25,9 +25,20 @@ function initContent() {
 function initFooter() {
     const footer = document.createElement("div");
     footer.id = "footer";
-    const copyright = document.createElement("dive");
+
+    const copyright = document.createElement("div");
     copyright.textContent = "©2021 adam gordon"
+
+    // const github_link = document.createElement("a");
+    // github_link.href = "https://google.com";
+
+    // const github_icon = document.createElement("img");
+    // github_icon.src = "./src/GitHub-Mark/GitHub-Mark-32px.png"
+
+    // github_link.appendChild(github_icon);
+
     footer.appendChild(copyright);
+    // footer.appendChild(github_icon);
     return footer;
 }
 

@@ -1,12 +1,12 @@
 const path = require('path');
-const json5 = require('json5');
+const json5 = require('json5'); // is this needed? what about for txt & csv?
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
-        menu: './src/menu.js'
+        // menu: './src/menu.js'
     },
     devtool: 'inline-source-map',
     devServer: {
