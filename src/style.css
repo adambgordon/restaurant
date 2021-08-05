@@ -34,12 +34,6 @@ html {
     text-decoration: underline;
 }
 
-#content {
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-}
-
 .about {
     width: 30rem;
     text-align: center;
@@ -51,6 +45,25 @@ html {
     margin: 0.5rem;
     justify-content: center;
 }
+
+#content {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mains {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+}
+
+.dish {
+    border: 1px solid black;
+
+}
+
+
 #footer {
     position: absolute;
     bottom: 0;
