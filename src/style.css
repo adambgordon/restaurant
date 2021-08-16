@@ -114,11 +114,19 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     /* margin-bottom: 1rem; */
 }
 
 .fa-github {
-    color: red;
+    color: rgb(70,70,70);
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.fa-github:hover {
+    cursor: pointer;
+    color: rgb(120,120,120);
 }
 
 #background {

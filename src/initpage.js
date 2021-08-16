@@ -35,12 +35,17 @@ function initFooter() {
     const copyright = document.createElement("div");
     copyright.textContent = "©2021 adam gordon"
 
+    const github_link = document.createElement("a");
+    github_link.onclick = () => {
+        window.open("https://github.com/gbreadman/restaurant","_blank");
+    };
     const github_icon = document.createElement("i");
     github_icon.classList.add("fab");
     github_icon.classList.add("fa-github");
+    github_link.appendChild(github_icon);
 
     footer.appendChild(copyright);
-    footer.appendChild(github_icon);
+    footer.appendChild(github_link);
     return footer;
 }
 
