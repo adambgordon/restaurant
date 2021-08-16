@@ -1,5 +1,11 @@
 import * as helper from "./helper.js"
 
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
+
+
 function initHeader() {
     const header = document.createElement("div");
     header.id = "header";
@@ -29,16 +35,12 @@ function initFooter() {
     const copyright = document.createElement("div");
     copyright.textContent = "©2021 adam gordon"
 
-    // const github_link = document.createElement("a");
-    // github_link.href = "https://google.com";
-
-    // const github_icon = document.createElement("img");
-    // github_icon.src = "./src/GitHub-Mark/GitHub-Mark-32px.png"
-
-    // github_link.appendChild(github_icon);
+    const github_icon = document.createElement("i");
+    github_icon.classList.add("fab");
+    github_icon.classList.add("fa-github");
 
     footer.appendChild(copyright);
-    // footer.appendChild(github_icon);
+    footer.appendChild(github_icon);
     return footer;
 }
 

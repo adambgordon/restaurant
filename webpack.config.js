@@ -43,6 +43,21 @@ module.exports = {
                     parse: json5.parse,
                 },
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                    name: '[name].[ext]',
+                    outputPath: '../fonts/',  
+                    publicPath: '../static/fonts' 
+                    }
+                }]
+            },
         ],
     },
 };
