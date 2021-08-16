@@ -107,8 +107,8 @@ body {
     font-weight: 300;
 }
 
-#footer {
-    font-size: .9rem;
+#footer-wrapper {
+    /* font-size: .9rem; */
     position: absolute;
     bottom: 1.5rem;
     width: 100%;
@@ -118,13 +118,20 @@ body {
     /* margin-bottom: 1rem; */
 }
 
+#footer {
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .fa-github {
     color: rgb(70,70,70);
     margin-left: 0.5rem;
     font-size: 1.2rem;
 }
 
-.fa-github:hover {
+#footer:hover, #footer:hover .fa-github {
     cursor: pointer;
     color: rgb(120,120,120);
 }
