@@ -147,3 +147,9 @@ body {
     transform: rotate(-45deg);
     color: rgb(245, 245, 245);
 }
+
+#logo {
+    z-index: 2;
+    width: 128px;
+    height: 128px;
+}

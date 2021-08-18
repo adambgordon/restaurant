@@ -3,6 +3,8 @@ import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
+import logo_image from "./logo.svg"
+
 
 
 function initHeader() {
@@ -64,8 +66,19 @@ function initBackground() {
     return background;
 }
 
+function initLogo() {
+    // const logoWrapper = document.createElement("div");
+    const logo = document.createElementNS("./logo.svg", "svg");
+    logo.id = "logo";
+    // logo.src = logo_image;
+    // logo.alt = "the brunch place";
+    // logo.setAttribute("viewBox", "50 50 100 100");
+    return logo;
+}
+
 function initPage () {
     document.body.appendChild(initBackground());
+    // document.body.appendChild(initLogo());
 
     const wrapper = document.createElement("div");
     wrapper.id = "wrapper";
