@@ -44,15 +44,6 @@ module.exports = {
                     parse: json5.parse,
                 },
             },
-            // {
-            //     test: /\.(png|jpg|jpeg|gif)$/i,
-            //     type: 'asset/resource',
-            //     use: [
-            //         {
-            //           loader: 'file-loader',
-            //         },
-            //       ],
-            // },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
                 use: [
@@ -61,9 +52,12 @@ module.exports = {
                     },
                   ],
             },
-
             {
-                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
+            },
+            {
+                test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: [{
                     loader: 'file-loader',
                     options: {

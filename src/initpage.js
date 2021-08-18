@@ -1,9 +1,8 @@
 import * as helper from "./helper.js";
 import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 import logo from "./logo.png";
+import logo_white from "./logo-white.png";
 
 function initHeader() {
     const header = document.createElement("div");
@@ -36,10 +35,8 @@ function initFooter() {
     footer.onclick = () => {
         window.open("https://github.com/gbreadman/restaurant","_blank");
     };
-
     const copyright = document.createElement("div");
     copyright.textContent = "©2021 adam gordon"
-
     const github_icon = document.createElement("i");
     github_icon.classList.add("fab");
     github_icon.classList.add("fa-github");
@@ -73,14 +70,17 @@ function initLogo() {
     const logoImage = new Image();
     logoImage.src = logo;
     logoImage.id = "logo";
-
+    const logoFilter = new Image();
+    logoFilter.src = logo_white;
+    logoFilter.id = "logo-filter";
     logoWrapper.appendChild(logoImage);
+    logoWrapper.appendChild(logoFilter);
     return logoWrapper;
 }
 
 function initPage () {
     document.body.appendChild(initBackground());
-
+    document.body.appendChild(initLogo());
     const wrapper = document.createElement("div");
     wrapper.id = "wrapper";
     wrapper.appendChild(initHeader());
@@ -88,13 +88,7 @@ function initPage () {
     wrapper.appendChild(initContent());
     wrapper.appendChild(initFooter());
     document.body.appendChild(wrapper);
-    
-    document.body.appendChild(initLogo());
-
     helper.activate(document.getElementById("about"));
 }
 
 export default initPage;
-
-
-
