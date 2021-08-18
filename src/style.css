@@ -148,8 +148,18 @@ body {
     color: rgb(245, 245, 245);
 }
 
-#logo {
+#logo-wrapper {
     z-index: 2;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    /* width: 128px;
+    height: 128px; */
+}
+
+#logo {
+    /* display: inline-block; */
     width: 128px;
     height: 128px;
+    /* background: url('./logo.svg'); */
 }

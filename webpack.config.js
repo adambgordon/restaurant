@@ -14,8 +14,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-          title: 'Restaurant',
-          favicon: './src/logo.png',
+            title: 'Restaurant',
+            favicon: './src/logo.png',
         }),
     ],
     output: {
@@ -45,8 +45,13 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                use: [
+                    {
+                      loader: 'file-loader',
+                    },
+                  ],
             },
             {
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -59,10 +64,7 @@ module.exports = {
                     }
                 }]
             },
-            {
-                test: /\.svg$/i,
-                type: 'asset/resource',
-            },
+            
         ],
     },
 };

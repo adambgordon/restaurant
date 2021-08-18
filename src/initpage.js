@@ -3,9 +3,7 @@ import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
-import logo_image from "./logo.svg"
-
-
+import logo_image from "./logo.png"
 
 function initHeader() {
     const header = document.createElement("div");
@@ -67,18 +65,18 @@ function initBackground() {
 }
 
 function initLogo() {
-    // const logoWrapper = document.createElement("div");
-    const logo = document.createElementNS("./logo.svg", "svg");
+    const logoWrapper = document.createElement("div");
+    logoWrapper.id = "logo-wrapper";
+    const logo = document.createElement("img");
+    logo.src = logo_image;
     logo.id = "logo";
-    // logo.src = logo_image;
-    // logo.alt = "the brunch place";
-    // logo.setAttribute("viewBox", "50 50 100 100");
-    return logo;
+
+    logoWrapper.appendChild(logo);
+    return logoWrapper;
 }
 
 function initPage () {
     document.body.appendChild(initBackground());
-    // document.body.appendChild(initLogo());
 
     const wrapper = document.createElement("div");
     wrapper.id = "wrapper";
@@ -88,6 +86,8 @@ function initPage () {
     wrapper.appendChild(initFooter());
     document.body.appendChild(wrapper);
     
+    // document.body.appendChild(initLogo());
+
     helper.activate(document.getElementById("about"));
 }
 
