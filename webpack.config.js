@@ -44,15 +44,24 @@ module.exports = {
                     parse: json5.parse,
                 },
             },
+            // {
+            //     test: /\.(png|jpg|jpeg|gif)$/i,
+            //     type: 'asset/resource',
+            //     use: [
+            //         {
+            //           loader: 'file-loader',
+            //         },
+            //       ],
+            // },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
                 use: [
                     {
                       loader: 'file-loader',
                     },
                   ],
             },
+
             {
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: [{

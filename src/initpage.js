@@ -1,9 +1,9 @@
-import * as helper from "./helper.js"
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
-import logo_image from "./logo.png"
+import * as helper from "./helper.js";
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+import logo from "./logo.png";
 
 function initHeader() {
     const header = document.createElement("div");
@@ -67,11 +67,14 @@ function initBackground() {
 function initLogo() {
     const logoWrapper = document.createElement("div");
     logoWrapper.id = "logo-wrapper";
-    const logo = document.createElement("img");
-    logo.src = logo_image;
-    logo.id = "logo";
+    logoWrapper.onclick = () => {
+        window.open("https://github.com/gbreadman/restaurant","_blank");
+    };
+    const logoImage = new Image();
+    logoImage.src = logo;
+    logoImage.id = "logo";
 
-    logoWrapper.appendChild(logo);
+    logoWrapper.appendChild(logoImage);
     return logoWrapper;
 }
 
@@ -86,7 +89,7 @@ function initPage () {
     wrapper.appendChild(initFooter());
     document.body.appendChild(wrapper);
     
-    // document.body.appendChild(initLogo());
+    document.body.appendChild(initLogo());
 
     helper.activate(document.getElementById("about"));
 }

@@ -59,11 +59,17 @@ body {
     line-height: 175%;
 }
 
-.contact div {
+.contact > div {
     font-size: 1.05rem;
     display: flex;
-    margin: 0.5rem;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+
+.contact > div > div {
+    display: flex;
     justify-content: center;
+    margin: 0.25rem;
 }
 
 .section-header {

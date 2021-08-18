@@ -1,7 +1,15 @@
 {
-    "address-line-1":"the brunch place",
-    "address-line-2":"200 e colfax ave",
-    "address-line-3":"denver, co 80203",
-    "phone":"303-866-2604",
-    "email":"the@brunch.place"
+    "address": {
+        "line-1": "the brunch place",
+        "line-2": "200 e colfax ave",
+        "line-3": "denver, co 80203"
+    },
+    "contact-details": {
+        "phone": "303-866-2604",
+        "email": "the@brunch.place"
+    },
+    "hours": {
+        "line-1": "M-Th 5p-12a",
+        "line-2": "Sa-Su 9a-12a"
+    }
 }
