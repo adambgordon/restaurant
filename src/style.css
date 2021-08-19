@@ -178,17 +178,8 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    html {
-        height: fill-available;
-    }
-    body {
-        min-height: 100vh;
-        /* min-height: -webkit-fill-available; */
-        min-height: fill-available;
-    }
     #wrapper {
-        /* min-height: -webkit-fill-available; */
-        min-height: fill-available;
+        min-height: 92vh;
     }
     #logo, #logo-filter {
         top: 0.5rem;
