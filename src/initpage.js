@@ -8,7 +8,7 @@ function initHeader() {
     const header = document.createElement("div");
     header.id = "header";
     header.textContent = "the brunch place";
-    return header;
+    // return header;
 }
 
 function initNav() {
