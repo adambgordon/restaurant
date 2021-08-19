@@ -73,7 +73,6 @@ body {
 }
 
 .section-header {
-    /* border: 1px black solid; */
     font-weight: 600;
     margin: 0 auto;
     width: 40rem;
@@ -114,7 +113,6 @@ body {
 }
 
 #footer-wrapper {
-    /* font-size: .9rem; */
     position: absolute;
     bottom: 1.5rem;
     width: 100%;
@@ -177,4 +175,31 @@ body {
 #logo-wrapper:hover #logo-filter {
     cursor: pointer;
     opacity: 48%;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    #logo, #logo-filter {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+    #nav {
+        width: 20rem;
+    }
+    .about {
+        width: 19rem;
+    }
+    .section-header {
+        width: 20rem;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .dish-grid {
+        grid-template-columns: 1fr;
+    }
+    .dish {
+        margin: 0 auto;
+    }
 }
