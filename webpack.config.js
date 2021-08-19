@@ -54,7 +54,11 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                loader: 'svg-inline-loader'
+                use: [
+                    {
+                        loader: 'svg-inline-loader'
+                    },
+                ],
             },
             {
                 test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
