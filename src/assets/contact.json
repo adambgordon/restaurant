@@ -9,7 +9,8 @@
         "email": "the@brunch.place"
     },
     "hours": {
-        "line-1": "M-Th 5p-12a",
-        "line-2": "Sa-Su 9a-12a"
+        "line-1": "M-Th 5p-10p",
+        "line-2": "F 5p-11p",
+        "line-3": "Sa-Su 9a-11p"
     }
 }
