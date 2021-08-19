@@ -15,7 +15,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Restaurant',
-            favicon: './src/logo.png',
+            favicon: './src/assets/logo.png',
         }),
     ],
     output: {
@@ -38,12 +38,20 @@ module.exports = {
                 use: ['csv-loader'],
             },
             {
-                test: /\.json5$/i,
+                test: /\.(json5|json)$/i,
                 type: 'json',
                 parser: {
                     parse: json5.parse,
                 },
             },
+            // {
+            //     test: /\.json$/,
+            //     use: [
+            //         {
+            //           loader: 'json-loader',
+            //         },
+            //       ],
+            // },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
                 use: [
