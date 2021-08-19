@@ -1,4 +1,4 @@
-import json from "./contact.json";
+import json from "./assets/contact.json";
 
 function createContact() {
     const contactInfo = document.createElement("div");

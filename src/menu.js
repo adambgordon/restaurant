@@ -1,6 +1,4 @@
-import smalls from "./menu/smalls.csv";
-import mains from "./menu/mains.csv";
-import sweets from "./menu/sweets.csv"
+import Menu from "./assets/menu.json";
 
 function createDishSection (string) {
     const sectionHeader = document.createElement("div");
@@ -24,11 +22,11 @@ function createDishSection (string) {
     return sectionHeader;
 }
 
-function createDishList(array) {
+function createDishList(jsonArray) {
     const gridWrapper = document.createElement("div");
     gridWrapper.classList.add("dish-grid");
 
-    for (let i = 0; i < array.length; i++) {
+    for (let item in jsonArray) {
         const dish = document.createElement("div");
         const name = document.createElement("div");
         const description = document.createElement("div");
@@ -37,8 +35,8 @@ function createDishList(array) {
         name.classList.add("dish-name");
         description.classList.add("dish-description");
 
-        name.textContent = array[i][0];
-        description.textContent = array[i][1];
+        name.textContent = jsonArray[item].name;
+        description.textContent = jsonArray[item].description;
         
         dish.appendChild(name);
         dish.appendChild(description);
@@ -49,12 +47,11 @@ function createDishList(array) {
 
 function createMenu() {
     const menu = document.createElement("div");
-    menu.appendChild(createDishSection("smalls"));
-    menu.appendChild(createDishList(smalls));
-    menu.appendChild(createDishSection("mains"));
-    menu.appendChild(createDishList(mains));
-    menu.appendChild(createDishSection("sweets"));
-    menu.appendChild(createDishList(sweets));
+    
+    for (let section in Menu) {
+        menu.appendChild(createDishSection(Menu[section].name));
+        menu.appendChild(createDishList(Menu[section].dishes));
+    }
     return menu;
 }
 

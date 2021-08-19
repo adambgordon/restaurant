@@ -1,4 +1,4 @@
-import txt from "./about.txt";
+import txt from "./assets/about.txt";
 
 function createAbout() {
     const item = document.createElement("div");

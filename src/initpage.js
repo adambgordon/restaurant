@@ -1,8 +1,8 @@
 import * as helper from "./helper.js";
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/brands';
-import logo from "./logo.png";
-import logo_white from "./logo-white.png";
+import logo from "./assets/logo.png";
+import logo_white from "./assets/logo-white.png";
 
 function initHeader() {
     const header = document.createElement("div");
