@@ -65,7 +65,7 @@ function initLogo() {
     const logoWrapper = document.createElement("div");
     logoWrapper.id = "logo-wrapper";
     logoWrapper.onclick = () => {
-        window.open("https://github.com/gbreadman/restaurant","_blank");
+        window.open("https://gbreadman.github.io/restaurant/","_blank");
     };
     const logoImage = new Image();
     logoImage.src = logo;
