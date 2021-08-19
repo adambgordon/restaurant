@@ -1,5 +1,5 @@
 const path = require('path');
-const json5 = require('json5'); // is this needed? what about for txt & csv?
+const json5 = require('json5');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -44,14 +44,6 @@ module.exports = {
                     parse: json5.parse,
                 },
             },
-            // {
-            //     test: /\.json$/,
-            //     use: [
-            //         {
-            //           loader: 'json-loader',
-            //         },
-            //       ],
-            // },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
                 use: [
