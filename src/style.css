@@ -177,11 +177,12 @@ body {
     opacity: 48%;
 }
 
-
-
-
 @media only screen and (max-width: 600px) {
+    html {
+        height: -webkit-fill-available;
+    }
     body {
+        min-height: 100vh;
         min-height: -webkit-fill-available;
     }
     #logo, #logo-filter {
