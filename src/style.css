@@ -181,6 +181,9 @@ body {
 
 
 @media only screen and (max-width: 600px) {
+    body {
+        min-height: -webkit-fill-available;
+    }
     #logo, #logo-filter {
         top: 0.5rem;
         left: 0.5rem;
@@ -202,4 +205,5 @@ body {
     .dish {
         margin: 0 auto;
     }
+
 }
