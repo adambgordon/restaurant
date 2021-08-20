@@ -14,7 +14,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Restaurant',
+            title: 'the brunch place',
             favicon: './src/assets/logo.png',
         }),
     ],
