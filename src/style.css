@@ -178,7 +178,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    #wrapper {
+    body {
         min-height: 92vh;
     }
     #logo, #logo-filter {
