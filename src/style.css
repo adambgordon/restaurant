@@ -178,8 +178,11 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    body, #wrapper {
-        min-height: 92vh;
+    body {
+        height: 88vh;
+    }
+    #wrapper {
+        min-height: 88vh;
     }
     #logo, #logo-filter {
         top: 0.5rem;
