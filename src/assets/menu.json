@@ -3,41 +3,57 @@
         "name": "smalls",
         "dishes": {
             "1": {
-                "name": "chunky gazpacho",
-                "description": "tomatoes, cucumbers, peppers"
+                "name": "pickles",
+                "description": "three varieties of house brined pickles: dill, hot, bread & butter"
             },
             "2": {
+                "name": "esquites",
+                "description": "fresh cut corn, cotija cheese, ancho chile"
+            },
+            "3": {
+                "name": "chicken liver paté",
+                "description": "bacon onion jam, baguette crostini"
+            },
+            "4": {
+                "name": "chunky gazpacho",
+                "description": "tomatoes, cucumbers, bell peppers"
+            },
+            "6": {
                 "name": "french onion soup",
                 "description": "gooey gruyere, sourdough, thyme"
+            },
+            "5": {
+                "name": "cucumber salad",
+                "description": "paper thin slice, fresh dill, crunchy"
             }
         }
     },
     "section-2": {
-        "name": "mains",
+        "name": "bigs",
         "dishes": {
             "1": {
-                "name": "chicken & waffles",
-                "description": "description, description, description"
+                "name": "caesar salad",
+                "description": "green butter & romain lettuces, anchovy dressing, sourdough croutons"
             },
             "2": {
                 "name": "burger",
-                "description": "description, description, description"
+                "description": "7oz beef, smoked, dubliner cheddar, brioche bun, comme ça sauce"
             },
             "3": {
-                "name": "corned beef hash",
-                "description": "description, description, description"
+                "name": "chicken & waffles",
+                "description": "deep fried thigh, whipped butter, vermont maple syrup"
             },
             "4": {
-                "name": "skirt steak & eggs",
-                "description": "description, description, description"
+                "name": "corned beef hash & eggs",
+                "description": "house brined beef, fingerling potatoes, browned & crispy"
             },
             "5": {
-                "name": "caesar salad",
-                "description": "description, description, description"
+                "name": "skirt steak & eggs",
+                "description": "9oz plate cut, rosemary, seared"
             },
             "6": {
                 "name": "shrimp & grits",
-                "description": "description, description, description"
+                "description": "stone ground grits, cheddar & chevre, thick cut bacon"
             }
         }
     },
@@ -45,12 +61,20 @@
         "name": "sweets",
         "dishes": {
             "1": {
-                "name": "pain au chocolat",
-                "description": "description, description, description"
+                "name": "fruit of the day",
+                "description": "bowl of locally sourced fruit, side of whipped cream"
             },
             "2": {
+                "name": "pain au chocolat",
+                "description": "\"chocolate croissant\""
+            },
+            "3": {
                 "name": "blueberry muffin",
-                "description": "description, description, description"
+                "description": "halved, buttered, toasted"
+            },
+            "4": {
+                "name": "french toast",
+                "description": "single slice of challah, cinnamon, vermont maple syrup"
             }
         }
     }

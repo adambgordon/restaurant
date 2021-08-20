@@ -33,7 +33,7 @@ function initFooter() {
     const footer = document.createElement("a");
     footer.id = "footer";
     footer.onclick = () => {
-        window.open("https://github.com/gbreadman/restaurant","_blank");
+        window.open("https://github.com/adambgordon/restaurant","_blank");
     };
     const copyright = document.createElement("div");
     copyright.textContent = "©2021 adam gordon"
@@ -65,7 +65,7 @@ function initLogo() {
     const logoWrapper = document.createElement("div");
     logoWrapper.id = "logo-wrapper";
     logoWrapper.onclick = () => {
-        window.open("https://gbreadman.github.io/restaurant/","_self");
+        window.open("https://adambgordon.github.io/restaurant/","_self");
     };
     const logoImage = new Image();
     logoImage.src = logo;
